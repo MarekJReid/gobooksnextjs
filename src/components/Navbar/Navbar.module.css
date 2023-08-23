@@ -1,0 +1,23 @@
+/* navbar.module.css */
+
+.dropdownContainer {
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  height: auto;
+  width: 250px; /* width of the dropdown */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0.5rem 2rem; /* Adjust the padding as required */
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.dropdownOpen {
+  transform: translateX(0);
+}
