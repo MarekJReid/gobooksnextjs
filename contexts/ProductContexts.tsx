@@ -5,7 +5,10 @@ import React, {
   useState,
   ReactNode,
 } from "react";
-
+interface CustomAttribute {
+  stringValue?: string;
+  // ... you can add other potential properties here
+}
 interface ProductContextType {
   products: Product[];
 }
@@ -66,7 +69,11 @@ export const ProductsProvider: React.FC<ProductsProviderProps> = ({
             channels: item.itemData.channels,
             checkoutUrl:
               (item.customAttributeValues &&
-                Object.values(item.customAttributeValues)[0].stringValue) ||
+                (
+                  Object.values(
+                    item.customAttributeValues
+                  )[0] as CustomAttribute
+                ).stringValue) ||
               "",
           };
         });
