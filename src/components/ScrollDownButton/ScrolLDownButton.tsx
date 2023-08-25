@@ -1,6 +1,5 @@
 // components/ScrollDownButton.tsx
-import Image from "next/image";
-import React from "react";
+
 import DownArrow from "./DownArrow/DownArrow";
 const ScrollDownButton: React.FC = () => {
   const handleScrollDown = () => {

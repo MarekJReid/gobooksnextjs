@@ -7,7 +7,7 @@ export interface Product {
   description: ReactNode;
   id: string;
   name: string;
-  price: number;
+  price: string;
   // Add more fields as needed
 }
 

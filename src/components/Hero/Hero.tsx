@@ -1,6 +1,6 @@
 import React from "react";
 import Countdown from "../CountdownTimer/CountdownTimer";
-import ScrollDownButton from "../ScrollDownButton/ScrollDownButton"; // Typo fixed: 'ScrolLDownButton' to 'ScrollDownButton'
+import ScrollDownButton from "../ScrollDownButton/ScrolLDownButton";
 
 const Hero: React.FC = () => {
   return (
