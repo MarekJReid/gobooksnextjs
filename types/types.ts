@@ -45,6 +45,7 @@ export interface Order {
 
 export interface AboutUsSectionProps {
   key?: number;
+  index?: number;
   id?: string;
   image: string;
   heading: string;

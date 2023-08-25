@@ -1,4 +1,5 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const Footer: React.FC = () => {
   return (
@@ -7,41 +8,43 @@ const Footer: React.FC = () => {
         <div>
           {/* Page links */}
           <h2 className="font-bold text-lg mb-4">Go Books!</h2>
+
           <ul className="space-y-2">
             <li>
-              <a href="#">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="#">Courses</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
         <div>
           {/* Contact details */}
           <h2 className="font-bold text-lg mb-4">Contact</h2>
-          <p>123 Main Street</p>
-          <p>City, Country</p>
-          <p>Email: example@example.com</p>
-          <p>Phone: 123-456-7890</p>
+          <p className="mb-2">
+            Opening Hours - 10:00 to 17:00 Monday to Friday
+          </p>
+          <p className="mb-2">16 Sydney Street</p>
+          <p className="mb-2">Kilmore, 3764, Victoria</p>
+          <a href="mailto:contact@exploreeducationandtraining.com.au">
+            <p className="mb-2">
+              Email: contact@exploreeducationandtraining.com.au
+            </p>
+          </a>
+          <p className="mb-2">Phone: 0400393323</p>
         </div>
         <div>
           {/* Disclaimer */}
           <h2 className="font-bold text-lg mb-4">Disclaimer</h2>
-          <p>This is a sample website.</p>
-          <p>
-            Any resemblance to real businesses or persons, living or dead, is
-            purely coincidental.
-          </p>
+          <p className="mb-2">Disclaimer</p>
+          <p>Disclaimer needs to go here</p>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
