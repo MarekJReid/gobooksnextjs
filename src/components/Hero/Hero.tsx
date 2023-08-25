@@ -9,12 +9,17 @@ const Hero: React.FC = () => {
       <div
         className="bg-cover bg-center h-[50vh] md:h-screen md:w-1/2"
         style={{
-          backgroundImage: "url('./gobookshero.jpg')",
+          backgroundImage: "url('./herohero1.jpg')",
         }}
       ></div>
 
       {/* Information block */}
-      <div className="bg-green-700 h-[50vh] md:h-screen md:w-1/2 flex items-center justify-center p-8 md:p-16">
+      <div
+        className=" h-[50vh] md:h-screen md:w-1/2 flex items-center justify-center p-8 md:p-16"
+        style={{
+          backgroundColor: "#3489A7",
+        }}
+      >
         <div className=" rounded-lg  text-white  text-center p-4 md:p-8">
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
             Welcome to Go Books!
