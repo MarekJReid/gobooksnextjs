@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white h-16">
+    <nav className="bg-white h-16 fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-2 py-4 flex flex-row items-center justify-between w-full md:w-3/4">
         <Link href="/" className="flex">
           <Image

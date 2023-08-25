@@ -42,3 +42,12 @@ export interface Order {
   customer: CustomerInfo;
   // Add more fields as needed
 }
+
+export interface AboutUsSectionProps {
+  key?: number;
+  id?: string;
+  image: string;
+  heading: string;
+  description: string;
+  align: "left" | "right";
+}
