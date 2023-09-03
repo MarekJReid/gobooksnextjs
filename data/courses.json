@@ -1,0 +1,397 @@
+{
+  "courses": [
+    {
+      "title": "Introduction to Xero",
+      "description": "The Introduction to Xero course is designed to help participants understand the basics of accounting and bookkeeping using Xero's platform.",
+      "content": [
+        {
+          "heading": "Introduction to Xero",
+          "subtopics": [
+            "Overview of Xero's interface and features.",
+            "Creating and setting up your Xero account.",
+            "Navigating the dashboard and menu options."
+          ]
+        },
+        {
+          "heading": "Setting Up Your Organization",
+          "subtopics": [
+            "Adding your company's information and logo.",
+            "Configuring your organization's settings.",
+            "Setting up financial periods."
+          ]
+        },
+        {
+          "heading": "Chart of Accounts",
+          "subtopics": [
+            "Understanding the chart of accounts and its importance.",
+            "Creating and customizing accounts for different types of transactions.",
+            "Organizing accounts into categories."
+          ]
+        },
+        {
+          "heading": "Bank Reconciliation",
+          "subtopics": [
+            "Linking your bank accounts and credit cards to Xero.",
+            "Reconciling transactions to ensure accurate records.",
+            "Handling discrepancies between Xero and your bank statements."
+          ]
+        },
+        {
+          "heading": "Invoicing and Sales",
+          "subtopics": [
+            "Creating and sending invoices to customers.",
+            "Managing sales and tracking payments.",
+            "Handling GST calculations."
+          ]
+        },
+        {
+          "heading": "Purchases and Expenses",
+          "subtopics": [
+            "Entering bills and expenses into Xero.",
+            "Managing vendor payments and tracking outstanding bills.",
+            "Managing purchase orders and receipts."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Intermediate Xero Course",
+      "description": "Our Intermediate Xero course builds upon the foundational knowledge gained in the Introductory course. It delves deeper into the functionalities and features of the Xero accounting software.",
+      "content": [
+        {
+          "heading": "Advanced Transactions",
+          "subtopics": [
+            "Covering more complex transactions like multi-currency transactions, split transactions, and bulk imports."
+          ]
+        },
+        {
+          "heading": "Bank Reconciliation",
+          "subtopics": [
+            "Going beyond the basics to address more intricate scenarios with other account types such as go cardless, Square and eWay.",
+            "Reconciling multiple bank accounts, dealing with discrepancies, and handling unreconciled items."
+          ]
+        },
+        {
+          "heading": "Reporting",
+          "subtopics": [
+            "Exploring more reporting options such as customizing financial reports, creating and analysing budget reports, and generating variance analysis reports."
+          ]
+        },
+        {
+          "heading": "Fixed Assets",
+          "subtopics": [
+            "Understanding how to record and manage fixed assets, calculating depreciation, and generating relevant reports."
+          ]
+        },
+        {
+          "heading": "Integrations",
+          "subtopics": [
+            "Exploring integrations with other software and apps that can enhance the functionality of Xero, such as CRM systems, e-commerce platforms, and project management tools."
+          ]
+        },
+        {
+          "heading": "Troubleshooting",
+          "subtopics": [
+            "Developing the skills to diagnose and resolve common issues or discrepancies that might arise while using the software."
+          ]
+        },
+        {
+          "heading": "Experience Gained Through Real-life Scenarios",
+          "subtopics": [
+            "Working through case studies and practical examples that simulate real-world accounting scenarios to reinforce learning."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced Xero",
+      "description": "An advanced Xero course typically builds upon the foundational knowledge gained in basic or introductory Xero courses. Xero is a popular cloud-based accounting software that is used by businesses for various accounting and financial tasks. This advanced course dives deeper into the more complex features and functionalities of the software.",
+      "content": [
+        {
+          "heading": "Advanced Financial Reporting",
+          "subtopics": [
+            "In this section, you might learn about creating custom financial reports, using the report layouts effectively, and utilizing advanced reporting tools to analyze your business's financial health."
+          ]
+        },
+        {
+          "heading": "Advanced Automation",
+          "subtopics": [
+            "This could include more in-depth training on automating processes like recurring invoicing, bill payments, bank reconciliations, and reminders."
+          ]
+        },
+        {
+          "heading": "Inventory Management",
+          "subtopics": [
+            "If your business deals with inventory, the course might cover how to manage and track inventory within Xero, including handling variations, stock adjustments, and managing inventory valuations."
+          ]
+        },
+        {
+          "heading": "Project Tracking",
+          "subtopics": [
+            "Many businesses use Xero for project-based accounting. The advanced course might teach you how to set up and track projects, allocate costs, and analyze project profitability."
+          ]
+        },
+        {
+          "heading": "Advanced Payroll",
+          "subtopics": [
+            "If you use Xero for payroll processing, the course might cover complex payroll scenarios, benefits administration, superannuation (retirement savings) handling, and compliance with labor laws."
+          ]
+        },
+        {
+          "heading": "Multi-Currency Transactions",
+          "subtopics": [
+            "For businesses dealing with different currencies, the course could provide guidance on handling multi-currency transactions, including exchange rate management and currency gains/losses."
+          ]
+        },
+        {
+          "heading": "Advanced Bank Reconciliation",
+          "subtopics": [
+            "This might cover handling more complex bank reconciliation scenarios, such as dealing with unidentified transactions, handling discrepancies, and managing bank rules."
+          ]
+        },
+        {
+          "heading": "Integration with Third-Party Apps",
+          "subtopics": [
+            "Xero integrates with various third-party apps for different business needs. The course could teach you how to set up and manage these integrations effectively."
+          ]
+        },
+        {
+          "heading": "Customization and Settings",
+          "subtopics": [
+            "Learn about advanced customization options for invoices, quotes, and other documents. Understand how to set up advanced tracking categories and manage user permissions."
+          ]
+        },
+        {
+          "heading": "Tax and Compliance",
+          "subtopics": [
+            "Dive deeper into tax settings, handling GST, and generating advanced tax reports to ensure compliance with local tax regulations."
+          ]
+        },
+        {
+          "heading": "Data Security and User Access",
+          "subtopics": [
+            "Learn about managing user roles, permissions, and security settings to protect sensitive financial data."
+          ]
+        },
+        {
+          "heading": "Troubleshooting and Advanced Tips",
+          "subtopics": [
+            "Gain insights into resolving complex issues, understanding error messages, and implementing best practices for efficient use of the software."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Introduction to Computer Use",
+      "description": "This \"Introduction to Computer Use\" course covers essential concepts, skills, and tools that are fundamental for effectively using computers in various contexts. The course is designed to provide a solid foundation for individuals who have limited or no prior experience with computers, enabling them to become more comfortable and confident in using these essential tools in various aspects of life, work, and study.",
+      "content": [
+        {
+          "heading": "Computer Basics",
+          "subtopics": [
+            "Overview of computer hardware components (CPU, memory, storage devices, input/output devices).",
+            "Understanding computer software (operating systems, applications).",
+            "Differentiating between software and hardware."
+          ]
+        },
+        {
+          "heading": "Operating Systems",
+          "subtopics": [
+            "Introduction to common operating systems (Windows, macOS, Linux).",
+            "Navigating the user interface and using essential features.",
+            "Managing files and folders."
+          ]
+        },
+        {
+          "heading": "Software Applications",
+          "subtopics": [
+            "Introduction to productivity software (word processors, spreadsheets, presentation tools).",
+            "Basic tasks like creating, editing, and formatting documents."
+          ]
+        },
+        {
+          "heading": "Internet and Web Browsing",
+          "subtopics": [
+            "Navigating web browsers.",
+            "Searching the internet effectively.",
+            "Understanding web addresses (URLs).",
+            "Basic online safety and privacy."
+          ]
+        },
+        {
+          "heading": "Email Communication",
+          "subtopics": [
+            "Setting up and using email accounts.",
+            "Sending, receiving, and managing emails.",
+            "Attachments and basic email etiquette."
+          ]
+        },
+        {
+          "heading": "File Management",
+          "subtopics": [
+            "Organizing and managing files and folders.",
+            "Basic file operations (copying, moving, deleting).",
+            "Introduction to cloud storage."
+          ]
+        },
+        {
+          "heading": "Basic Troubleshooting",
+          "subtopics": [
+            "Identifying common computer issues.",
+            "Restarting and shutting down computers.",
+            "Dealing with frozen applications."
+          ]
+        },
+        {
+          "heading": "Security and Privacy",
+          "subtopics": [
+            "Basics of online security.",
+            "Creating strong passwords.",
+            "Recognizing phishing attempts and malware."
+          ]
+        },
+        {
+          "heading": "Digital Citizenship",
+          "subtopics": [
+            "Responsible and ethical use of computers and the internet.",
+            "Citing online sources and respecting copyright."
+          ]
+        },
+        {
+          "heading": "Introduction to Computer Hardware",
+          "subtopics": [
+            "Overview of computer components (CPU, RAM, hard drive, etc.).",
+            "Basic troubleshooting for hardware issues."
+          ]
+        },
+        {
+          "heading": "Keyboard and Mouse Skills",
+          "subtopics": [
+            "Developing efficient typing and navigation skills.",
+            "Keyboard shortcuts for common tasks."
+          ]
+        },
+        {
+          "heading": "Basic Computer Maintenance",
+          "subtopics": [
+            "Keeping the computer clean and organized.",
+            "Software updates and maintenance tasks."
+          ]
+        },
+        {
+          "heading": "Hands-on Practice",
+          "subtopics": [
+            "Practical exercises and assignments to apply learned concepts.",
+            "Guided tasks to reinforce skills."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Introduction to Microsoft Word",
+      "description": "The introduction to Microsoft Word course aims to familiarize participants with the basic tools, features, and functions of Microsoft Word, enabling them to create, edit, and format documents efficiently.",
+      "content": [
+        {
+          "heading": "Getting Started with Microsoft Word",
+          "subtopics": [
+            "Introduction to the Microsoft Word interface.",
+            "Navigating the ribbon, tabs, and menus.",
+            "Creating a new document and opening existing ones.",
+            "Saving and managing documents."
+          ]
+        },
+        {
+          "heading": "Text Entry and Editing",
+          "subtopics": [
+            "Typing and formatting text.",
+            "Selecting, copying, cutting, and pasting text.",
+            "Undo and redo actions.",
+            "Using the clipboard effectively."
+          ]
+        },
+        {
+          "heading": "Basic Formatting",
+          "subtopics": [
+            "Font styles, sizes, and colors.",
+            "Applying bold, italic, underline, and strikethrough.",
+            "Changing text alignment and line spacing.",
+            "Using formatting shortcuts."
+          ]
+        },
+        {
+          "heading": "Paragraph Formatting",
+          "subtopics": [
+            "Indenting paragraphs.",
+            "Adjusting line spacing and paragraph spacing.",
+            "Creating bulleted and numbered lists.",
+            "Using tabs and alignment."
+          ]
+        },
+        {
+          "heading": "Page Layout",
+          "subtopics": [
+            "Setting margins.",
+            "Adjusting page orientation (portrait vs. landscape).",
+            "Adding headers and footers.",
+            "Page numbering."
+          ]
+        },
+        {
+          "heading": "Document Elements",
+          "subtopics": [
+            "Inserting and formatting images and shapes.",
+            "Adding tables and adjusting table properties.",
+            "Including hyperlinks.",
+            "Inserting symbols and special characters."
+          ]
+        },
+        {
+          "heading": "Styles and Themes",
+          "subtopics": [
+            "Applying and customizing document styles.",
+            "Using themes for consistent design.",
+            "Modifying heading styles."
+          ]
+        },
+        {
+          "heading": "Spell Checking and Proofreading",
+          "subtopics": [
+            "Running spell and grammar checks.",
+            "Using thesaurus and language options.",
+            "Tracking changes and comments."
+          ]
+        },
+        {
+          "heading": "Document Views",
+          "subtopics": [
+            "Switching between different views (Print Layout, Web Layout, Draft).",
+            "Zooming in and out for easier editing."
+          ]
+        },
+        {
+          "heading": "Printing and Sharing",
+          "subtopics": [
+            "Previewing and printing documents.",
+            "Saving documents in different formats (PDF, Word, etc.).",
+            "Sending documents via email or sharing on cloud platforms."
+          ]
+        },
+        {
+          "heading": "Efficiency Tips and Shortcuts",
+          "subtopics": [
+            "Using keyboard shortcuts to speed up tasks.",
+            "Customizing the Quick Access Toolbar.",
+            "Utilizing AutoCorrect and AutoText."
+          ]
+        },
+        {
+          "heading": "Advanced Topics (Optional)",
+          "subtopics": [
+            "Mail merge for creating personalized documents.",
+            "Creating and formatting long documents (such as reports and theses).",
+            "Using templates to streamline document creation."
+          ]
+        }
+      ]
+    }
+  ]
+}

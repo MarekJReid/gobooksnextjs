@@ -1,14 +1,13 @@
 import React, {
+  ReactNode,
   createContext,
   useContext,
   useEffect,
   useState,
-  ReactNode,
 } from "react";
-interface CustomAttribute {
-  stringValue?: string;
-  // ... you can add other potential properties here
-}
+
+import { fetchProducts } from "../data/fetchProducts";
+
 interface ProductContextType {
   products: Product[];
 }
@@ -47,37 +46,11 @@ export const ProductsProvider: React.FC<ProductsProviderProps> = ({
 }: ProductsProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
 
+  // in your ProductsProvider component...
   useEffect(() => {
-    // Fetch products from your catalogHandler or another API endpoint
-    // For the purpose of this example, let's say you have an API route "/api/catalog" that uses catalogHandler
-    fetch("/api/catalog")
-      .then((res) => res.json())
-      .then((data) => {
-        const products = data.objects.map((item) => {
-          const variation = item.itemData.variations[0]; // Assuming there's at least one variation for each item
-
-          return {
-            id: item.id,
-            name: item.itemData.name,
-            description: item.itemData.description || "",
-            image: item.itemData.imageUrl || "",
-            price: variation.itemVariationData.priceMoney.amount,
-            ecomUri: item.itemData.ecom_uri || "",
-            ecomImageUris: item.itemData.ecom_image_uris || [],
-            isTaxable: item.itemData.is_taxable,
-            taxIds: item.itemData.tax_ids,
-            channels: item.itemData.channels,
-            checkoutUrl:
-              (item.customAttributeValues &&
-                (
-                  Object.values(
-                    item.customAttributeValues
-                  )[0] as CustomAttribute
-                ).stringValue) ||
-              "",
-          };
-        });
-        setProducts(products); // Assuming `objects` contains the list of products
+    fetchProducts()
+      .then((fetchedProducts) => {
+        setProducts(fetchedProducts);
       })
       .catch((error) => {
         console.error("Error fetching products:", error);

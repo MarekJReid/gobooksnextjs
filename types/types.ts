@@ -2,13 +2,23 @@ import { ReactNode } from "react";
 
 // types.ts
 export interface Product {
+  channels?: any; // The type is 'any' because it's set as 'undefined' and the exact type isn't specified.
   checkoutUrl: string;
-  image: string;
-  description: ReactNode;
+  content?: ContentSection[];
+  description: string;
+  ecomImageUris: string[];
+  ecomUri: string;
   id: string;
+  image: string;
+  isTaxable?: any; // Same reason as 'channels', the type is set as 'any'.
   name: string;
   price: string;
-  // Add more fields as needed
+  taxIds?: any; // Same reason as 'channels', the type is set as 'any'.
+}
+
+interface ContentSection {
+  heading: string;
+  subtopics: string[];
 }
 
 export interface CartItem {

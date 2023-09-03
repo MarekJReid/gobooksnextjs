@@ -33,7 +33,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [router, setTransitioning]);
 
   return (
-    <>
+    <div style={{ position: `relative` }}>
       <Navbar />
       <Transition
         as="div"
@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </Transition>
       <Footer />
-    </>
+    </div>
   );
 };
 
