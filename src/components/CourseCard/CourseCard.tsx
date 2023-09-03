@@ -9,6 +9,7 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ product }) => {
+  console.log("product", product);
   function slugify(str) {
     return str
       .toLowerCase()
