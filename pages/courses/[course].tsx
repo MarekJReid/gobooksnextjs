@@ -38,7 +38,11 @@ const CoursePage: React.FC<CourseProps> = ({ product }) => {
           <CourseContactForm />
         </div>
 
-        <Sidebar priceToUse={product.price} price={0} />
+        <Sidebar
+          priceToUse={product.price}
+          price={0}
+          checkoutUrl={product.checkoutUrl}
+        />
       </PageWrapper>
     </Layout>
   );

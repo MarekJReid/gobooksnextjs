@@ -1,5 +1,3 @@
-// Section.tsx
-
 import React from "react";
 import { AboutUsSectionProps } from "../../../types/types";
 import Image from "next/image";
@@ -12,23 +10,22 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({
   description,
   align,
 }) => {
-  console.log("key", id);
   return (
     <div
       id={id}
-      className={`flex flex-col md:flex-row h-[24rem]  mb-[3.5rem] md:mb-[7.5rem] ${
+      className={`flex flex-col md:flex-row md:mb-[7.5rem] ${
         align === "right" ? "md:flex-row-reverse" : ""
-      }`}
+      } pb-4 md:pb-0`}
     >
       <Image
         src={`/${image}${index}.jpg`}
         alt={heading}
         width={500}
         height={500}
-        className="w-full md:w-1/3 h-auto object-cover"
+        className="w-full md:w-1/3 h-auto object-cover mb-4 md:mb-0"
       />
       <div
-        className={`w-full md:w-2/3 pt-16 ${
+        className={`w-full md:w-2/3 pt-4 md:pt-16 ${
           align === "left" ? "md:pl-16" : "md:pr-16"
         }`}
       >

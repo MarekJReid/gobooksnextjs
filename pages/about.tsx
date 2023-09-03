@@ -6,14 +6,12 @@ import Layout from "../src/components/Layout";
 import SEO from "../src/components/SEO";
 import Image from "next/image";
 
-// ... other imports ...
-
 const SectionComponent: React.FC = () => {
   return (
     <Layout>
       <SEO title="About Us" keywords={["website", "home", "main"]} />
-      <div className="container mx-auto flex md:flex-row flex-col-reverse mt-[6rem] sticky">
-        <div className="w-full md:w-1/4 py-4 md:mt-12 md:pr-4 hidden md:block">
+      <div className="container mx-auto flex flex-col md:flex-row mt-[6rem]">
+        <div className="hidden md:block w-full md:w-1/4 py-4 md:mt-12 md:pr-4">
           <div className="sticky top-[6rem]">
             {data.map((section, index) => (
               <Link
@@ -30,22 +28,26 @@ const SectionComponent: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="w-full md:w-3/4 ">
+        <div className="w-full md:w-3/4 px-4 md:px-0">
           {data.map((section, index) => {
             if (section.type === "intro") {
               return (
-                <div key={index} id={`section-${index}`}>
+                <div
+                  key={index}
+                  id={`section-${index}`}
+                  className="flex flex-col items-center my-4 md:my-8"
+                >
                   <Image
                     src="/about0.jpg"
                     alt={section.heading}
                     width={500}
                     height={500}
-                    className="w-full h-[40rem] object-contain"
+                    className="w-full object-cover md:object-contain md:h-[40rem]"
                   />
-                  <h1 className="text-4xl font-bold text-center mb-4 mt-16">
+                  <h1 className="text-4xl font-bold text-center mt-4 md:mt-16 mb-4">
                     {section.heading}
                   </h1>
-                  <p className="text-center mb-[6rem] text-xl px-16">
+                  <p className="text-center mb-6 text-xl md:mb-[6rem] px-4 md:px-16">
                     {section.description}
                   </p>
                 </div>

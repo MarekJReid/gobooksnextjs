@@ -5,9 +5,10 @@ import SidebarDesktop from "./SidebarDesktop";
 interface SidebarProps {
   priceToUse: string;
   price: number;
+  checkoutUrl: string;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ priceToUse }) => {
+const Sidebar: React.FC<SidebarProps> = ({ priceToUse, checkoutUrl }) => {
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
@@ -20,9 +21,9 @@ const Sidebar: React.FC<SidebarProps> = ({ priceToUse }) => {
   }, []);
 
   return isMobile ? (
-    <SidebarMobile priceToUse={priceToUse} />
+    <SidebarMobile priceToUse={priceToUse} checkoutUrl={checkoutUrl} />
   ) : (
-    <SidebarDesktop priceToUse={priceToUse} />
+    <SidebarDesktop priceToUse={priceToUse} checkoutUrl={checkoutUrl} />
   );
 };
 

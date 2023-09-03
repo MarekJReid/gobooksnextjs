@@ -35,7 +35,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ product }) => {
           ) : (
             <div className="w-[90vw] md:w-[30vw] lg:w-[25vw] h-[20vh] bg-red-500"></div>
           )}
-          <h2 className="">{product.name}</h2>
+          <h2 className="text-center">{product.name}</h2>
           <p className="">{product.description}</p>
           <h2 className="">${(parseFloat(product.price) / 100).toFixed(2)}</h2>
         </div>

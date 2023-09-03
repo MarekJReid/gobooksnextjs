@@ -1,4 +1,3 @@
-/* eslint-disable react/no-children-prop */
 import React from "react";
 
 import Layout from "../src/components/Layout";
@@ -13,13 +12,13 @@ const ProductsPage: React.FC = () => {
       <SEO title="Contact Us" keywords={["website", "home", "main"]} />
 
       <div
-        className="flex flex-col md:flex-row w-full mt-[4rem]"
+        className="flex flex-col md:flex-row w-full mt-[4rem] relative"
         style={{
           background: "#3489a7",
         }}
       >
         {/* Left container - holds the image */}
-        <div className="relative md:w-1/2 w-full h-[97vh] md:block">
+        <div className="display:md:w-1/2 w-full h-[200px] md:h-[97vh] md:block relative">
           <Image
             src="/gobooks.jpg"
             layout="fill"
@@ -29,7 +28,7 @@ const ProductsPage: React.FC = () => {
         </div>
 
         {/* Right container - holds the form and contact details */}
-        <div className="w-full md:w-1/2  p-8 md:py-16 md:px-24 text-white">
+        <div className="w-full md:w-1/2  p-8 md:py-16 md:px-24 text-white relative">
           <h1 className="text-3xl mt-10 mb-6">We are here to help</h1>
           <h3 className="text-2xl mb-4">
             Fill out the form to reach out to us
@@ -52,16 +51,6 @@ const ProductsPage: React.FC = () => {
             </p>
           </a>
           <p className="mb-2">Phone: 0400393323</p>
-        </div>
-
-        {/* Mobile image */}
-        <div className="md:hidden w-full h-1/4">
-          <Image
-            src="/gobooks.jpg"
-            layout="fill"
-            objectFit="cover"
-            alt="Description of image"
-          />
         </div>
       </div>
     </Layout>

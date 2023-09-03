@@ -3,9 +3,13 @@ import Image from "next/image";
 
 interface SidebarProps {
   priceToUse: string;
+  checkoutUrl: string;
 }
 
-const SidebarDesktop: React.FC<SidebarProps> = ({ priceToUse }) => {
+const SidebarDesktop: React.FC<SidebarProps> = ({
+  priceToUse,
+  checkoutUrl,
+}) => {
   const price = parseFloat(priceToUse) / 100;
   return (
     <div className="flex flex-col sticky md:right-0 bg-white h-[66vh] md:top-[6vh] md:w-4/12 lg:w-3/12">
@@ -29,8 +33,16 @@ const SidebarDesktop: React.FC<SidebarProps> = ({ priceToUse }) => {
         <p className="text-2xl text-green-500 line-through">
           ${(price * 1.25).toFixed(2)}
         </p>
-        <button className="bg-red-500 text-white text-2xl text-bold rounded-md px-16 py-4 mb-2">
-          Enrol Now
+        <button className="bg-red-500 text-white rounded-md px-8 py-2">
+          <a
+            href={checkoutUrl && checkoutUrl}
+            // open in new tab
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl no-underline hover:no-underline hover:text-white hover:scale-105 transition-transform"
+          >
+            Enrol Now
+          </a>
         </button>
       </div>
     </div>
