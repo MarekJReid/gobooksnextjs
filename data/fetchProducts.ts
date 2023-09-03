@@ -14,7 +14,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
   return data.objects.map((item) => {
     const variation = item.itemData.variations[0]; // Assuming there's at least one variation for each item
 
-    // Find corresponding course in courses array from json
+    // Find corresponding course in courses array from json lll
     const correspondingCourse = courseData.courses.find(
       (course) => course.title === item.itemData.name
     );
