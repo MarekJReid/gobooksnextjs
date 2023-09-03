@@ -11,6 +11,7 @@ interface ThreeColumnGridProps {
 
 const CoursesGrid: React.FC<ThreeColumnGridProps> = ({ columns }) => {
   const { products } = useProducts();
+  console.log("products", products);
   return (
     <>
       <h2 className="text-4xl mt-36 md:mt-0 md:text-5xl font-bold text-center">

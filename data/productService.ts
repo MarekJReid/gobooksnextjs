@@ -57,7 +57,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
         };
       })
     );
-    console.log("items", items);
+
     return items; // Return the items array with price as strings
   } catch (error) {
     console.log(error);
