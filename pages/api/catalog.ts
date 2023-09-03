@@ -14,13 +14,12 @@ export default async function handler(req, res) {
     // If the item has an image_id, fetch its details
     const items = await Promise.all(
       catalogResponse.result.objects.map(async (item: any) => {
-        item.itemData.imageIds && console.log(item.itemData.imageIds[0]);
+        item.itemData.imageIds;
         let image: any;
         image =
           item.itemData.imageIds &&
           (await catalogApi.retrieveCatalogObject(item.itemData.imageIds[0]));
         if (item.itemData && item.itemData.imageIds) {
-          console.log(item.itemData.imageIds[0]);
           const imageResponse = await catalogApi.retrieveCatalogObject(
             item.itemData.imageIds[0]
           );

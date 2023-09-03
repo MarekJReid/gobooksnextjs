@@ -1,4 +1,4 @@
-// CoursePage.tsx
+import { GetStaticPaths, GetStaticProps } from "next";
 import { fetchProducts } from "../../data/productService";
 import Accordion from "../../src/components/Accordian/Accordian";
 import ContactForm from "../../src/components/ContactForm/ContactForm";
@@ -17,14 +17,13 @@ interface CourseProps {
 
 const CoursePage: React.FC<CourseProps> = ({ product }) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  console.log("product", product);
+  console.log("product.image", product.image);
   return (
     <Layout>
       <FullScreenImage imageUrl={product.image} />
 
       <PageWrapper>
         <div className="flex-1 px-4 w-[90vw]">
-          {" "}
           {/* New addition to wrap the content */}
           <IntroductionSection
             courseName={product.name}
@@ -47,47 +46,62 @@ const CoursePage: React.FC<CourseProps> = ({ product }) => {
     </Layout>
   );
 };
-function slugify(str) {
-  return str
-    .toLowerCase()
-    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
-    .replace(/\s+/g, "-") // collapse whitespace and replace by -
-    .replace(/-+/g, "-"); // collapse dashes
-}
-export async function getStaticPaths() {
-  const products: Product[] = await fetchProducts();
+// ...
 
-  // Use the slugify function here to convert product names to slugs
-  const paths = products.map((product) => ({
-    params: { course: slugify(product.name) },
-  }));
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const products: Product[] = await fetchProducts();
 
-  return {
-    paths,
-    fallback: "blocking",
-  };
-}
-// Use the fetchProducts function to fetch products
-export async function getStaticProps({
+    // Ensure products is an array
+    if (!Array.isArray(products)) {
+      console.error("Products is not an array:", products);
+      return {
+        paths: [],
+        fallback: "blocking", // or any other appropriate value
+      };
+    }
+
+    // Use the product.slug directly as the course param
+    const paths = products.map((product) => ({
+      params: { course: String(product.slug) }, // Convert to string
+    }));
+    console.log("paths", paths);
+    return {
+      paths,
+      fallback: "blocking",
+    };
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return {
+      paths: [],
+      fallback: "blocking", // or any other appropriate value
+    };
+  }
+};
+
+export const getStaticProps: GetStaticProps<CourseProps> = async ({
   params,
 }: {
-  params: { course: string };
-}) {
+  params: { course: any }; // Ensure course is of type string
+}) => {
   const products = await fetchProducts();
 
-  // Find the product by comparing the slugified name to the given course param
-  const product = products.find((p) => slugify(p.name) === params.course);
+  // Find the product by comparing the slug directly to the given course param
+  const product = products.find((p) => p.slug === params.course);
 
   if (!product) {
     return {
       notFound: true,
     };
   }
+
   return {
     props: {
       product,
     },
   };
-}
+};
+
+// ...
 
 export default CoursePage;

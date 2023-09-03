@@ -5,7 +5,7 @@ import Layout from "../src/components/Layout";
 
 const ProductsPage: React.FC = () => {
   const { products } = useProducts();
-  console.log("products", products);
+
   return (
     <Layout>
       <h1>Our Courses</h1>

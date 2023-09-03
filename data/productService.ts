@@ -10,6 +10,15 @@ interface CustomAttribute {
   // ... you can add other potential properties here
 }
 const catalogApi: CatalogApi = client.catalogApi;
+function slugify(str) {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+    .replace(/\s+/g, "-") // collapse whitespace and replace by -
+    .replace(/-+/g, "-"); // collapse dashes
+}
+// ...
+
 export const fetchProducts = async (): Promise<Product[]> => {
   try {
     const catalogResponse = await catalogApi.listCatalog(undefined, "ITEM");
@@ -23,13 +32,17 @@ export const fetchProducts = async (): Promise<Product[]> => {
           (course) => course.title === item.itemData.name
         );
 
+        // Convert price to string
+        const price = variation.itemVariationData.priceMoney.amount.toString();
+
         return {
           id: item.id,
           name: item.itemData.name,
+          slug: slugify(item.itemData.name),
           description:
             item.itemData.description || correspondingCourse?.description || "",
           image: item.itemData.imageUrl || "",
-          price: variation.itemVariationData.priceMoney.amount,
+          price, // Store price as a string
           ecomUri: item.itemData.ecom_uri || "",
           ecomImageUris: item.itemData.ecom_image_uris || [],
           // isTaxable: item.itemData.is_taxable || null,
@@ -45,14 +58,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
       })
     );
 
-    // Convert any BigInt to string for JSON serialization
-    const result = JSON.parse(
-      JSON.stringify({ objects: items }, (_, v) =>
-        typeof v === "bigint" ? v.toString() : v
-      )
-    );
-
-    return result;
+    return items; // Return the items array with price as strings
   } catch (error) {
     console.log(error);
     throw new Error("An error occurred while fetching products.");

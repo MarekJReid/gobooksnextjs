@@ -17,7 +17,6 @@ const CourseContactForm: React.FC = () => {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
-    console.log(data);
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
