@@ -5,6 +5,7 @@ import Link from "next/link";
 
 interface CourseCardProps {
   product: Product;
+  slug: string;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ product }) => {

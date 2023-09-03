@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 // types.ts
 export interface Product {
-  slug(arg0: any, slug: any): any;
+  slug?(arg0: any, slug: any): any;
   channels?: any; // The type is 'any' because it's set as 'undefined' and the exact type isn't specified.
   checkoutUrl: string;
   content?: ContentSection[];

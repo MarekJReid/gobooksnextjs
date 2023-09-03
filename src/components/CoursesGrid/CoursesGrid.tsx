@@ -20,7 +20,7 @@ const CoursesGrid: React.FC<ThreeColumnGridProps> = ({ columns }) => {
         className={`grid grid-cols-1 mb-24 md:grid-cols-3 gap-4 grid-flow-row justify-center flex align-center py-16 p-5 md:pt-[56px] `}
       >
         {products.map((product, i) => (
-          <CourseCard product={product} key={i} />
+          <CourseCard product={product} key={i} slug={""} />
         ))}
       </div>
     </>

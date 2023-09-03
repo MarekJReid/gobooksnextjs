@@ -17,7 +17,7 @@ interface CourseProps {
 
 const CoursePage: React.FC<CourseProps> = ({ product }) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  console.log("product.image", product.image);
+  console.log("product.image", product);
   return (
     <Layout>
       <FullScreenImage imageUrl={product.image} />
