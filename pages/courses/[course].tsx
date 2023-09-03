@@ -67,18 +67,17 @@ export async function getStaticPaths() {
     fallback: "blocking",
   };
 }
-
+// Use the fetchProducts function to fetch products
 export async function getStaticProps({
   params,
 }: {
   params: { course: string };
 }) {
-  const products: Product[] = await fetchProducts();
+  const products = await fetchProducts();
 
   // Find the product by comparing the slugified name to the given course param
   const product = products.find((p) => slugify(p.name) === params.course);
 
-  console.log("product", products);
   if (!product) {
     return {
       notFound: true,
