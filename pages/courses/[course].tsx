@@ -1,5 +1,5 @@
 // CoursePage.tsx
-import { fetchProducts } from "../../data/fetchProducts";
+import { fetchProducts } from "../../data/productService";
 import Accordion from "../../src/components/Accordian/Accordian";
 import ContactForm from "../../src/components/ContactForm/ContactForm";
 import CourseContactForm from "../../src/components/CoursePageForm/CoursePageForm";
@@ -17,7 +17,7 @@ interface CourseProps {
 
 const CoursePage: React.FC<CourseProps> = ({ product }) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
-
+  console.log("product", product);
   return (
     <Layout>
       <FullScreenImage imageUrl={product.image} />
