@@ -20,7 +20,7 @@ const CoursePage: React.FC<CourseProps> = ({ product }) => {
 
   return (
     <Layout>
-      <FullScreenImage imageUrl="" />
+      <FullScreenImage imageUrl={product.image} />
 
       <PageWrapper>
         <div className="flex-1 px-4 w-[90vw]">

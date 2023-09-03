@@ -7,15 +7,19 @@ interface FullScreenImageProps {
 
 const FullScreenImage: React.FC<FullScreenImageProps> = ({ imageUrl }) => {
   const { products } = useProducts();
-  const image = products[0].image;
+  console.log("products[0]", products[0]);
   return (
-    <div
-      className="w-full h-[70vh] bg-cover"
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundSize: "cover", // Add this line to maintain aspect ratio
-      }}
-    ></div>
+    <>
+      {products[0] && (
+        <div
+          className="w-full h-[70vh] bg-cover"
+          style={{
+            backgroundImage: `url(${products[0].image})`,
+            backgroundSize: "cover", // Add this line to maintain aspect ratio
+          }}
+        ></div>
+      )}
+    </>
   );
 };
 
