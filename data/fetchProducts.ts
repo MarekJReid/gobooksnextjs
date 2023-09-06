@@ -18,10 +18,17 @@ export const fetchProducts = async (): Promise<Product[]> => {
     const correspondingCourse = courseData.courses.find(
       (course) => course.title === item.itemData.name
     );
-
+    function slugify(str) {
+      return str
+        .toLowerCase()
+        .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+        .replace(/\s+/g, "-") // collapse whitespace and replace by -
+        .replace(/-+/g, "-"); // collapse dashes
+    }
     return {
       id: item.id,
       name: item.itemData.name,
+      slug: slugify(item.itemData.name),
       description:
         item.itemData.description || correspondingCourse?.description || "",
       image: item.itemData.imageUrl || "",

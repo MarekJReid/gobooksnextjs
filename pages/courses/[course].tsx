@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { fetchProducts } from "../../data/productService";
+import { fetchProducts } from "../../data/fetchProducts";
 import Accordion from "../../src/components/Accordian/Accordian";
 import ContactForm from "../../src/components/ContactForm/ContactForm";
 import CourseContactForm from "../../src/components/CoursePageForm/CoursePageForm";
