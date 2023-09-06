@@ -1,17 +1,14 @@
 import React, {
-  ReactNode,
   createContext,
   useContext,
   useEffect,
   useState,
+  ReactNode,
 } from "react";
 
 import { fetchProducts } from "../data/fetchProducts";
 
-interface ProductContextType {
-  products: Product[];
-}
-type Product = {
+interface Product {
   channels?: unknown; // You've marked it as 'undefined', but it might be more suitable to define its type when it's available.
   description: string;
   ecomImageUris: string[];
@@ -23,7 +20,11 @@ type Product = {
   price: string; // You might want to consider converting this to a number if that's more applicable.
   taxIds?: unknown[]; // Same note as for 'channels'.
   checkoutUrl: string;
-};
+}
+
+interface ProductContextType {
+  products: Product[];
+}
 
 interface ProductsProviderProps {
   children: ReactNode;
@@ -46,15 +47,17 @@ export const ProductsProvider: React.FC<ProductsProviderProps> = ({
 }: ProductsProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
 
-  // in your ProductsProvider component...
   useEffect(() => {
-    fetchProducts()
-      .then((fetchedProducts) => {
+    const fetchProductsData = async () => {
+      try {
+        const fetchedProducts = await fetchProducts();
         setProducts(fetchedProducts);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error fetching products:", error);
-      });
+      }
+    };
+
+    fetchProductsData();
   }, []);
 
   return (
