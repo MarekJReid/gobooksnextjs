@@ -2,11 +2,11 @@ import { ReactNode } from "react";
 
 // types.ts
 export interface Course {
+  id?: number;
   button: string;
   price: string;
   title: string;
   description: string;
-  image?: string; // Add the image property as a string
   content: {
     heading: string;
     subtopics: string[];

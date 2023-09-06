@@ -1,6 +1,7 @@
 {
   "courses": [
     {
+      "id": 0,
       "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/2HHO5ZKOIBKMUSLFPCWGBELP",
       "price": "600",
       "title": "Introduction to Xero",
@@ -57,6 +58,7 @@
       ]
     },
     {
+      "id": 1,
       "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/UVXEVZ6RLE2C33PYENG3BI2A",
       "price": "600",
       "title": "Intermediate Xero Course",
@@ -108,6 +110,7 @@
       ]
     },
     {
+      "id": 2,
       "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/LIDVP3B2RGF5QMXJ4ZU3HMYS",
       "title": "Advanced Xero",
       "price": "600",

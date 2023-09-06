@@ -1,9 +1,7 @@
 // ThreeColumnGrid.tsx
 import React, { ReactNode } from "react";
-import { useProducts } from "../../../contexts/ProductContexts";
-import Image from "next/image";
-import CourseCard from "../CourseCard/CourseCard";
 import products from "../../../data/courses.json";
+import CourseCard from "../CourseCard/CourseCard";
 interface ThreeColumnGridProps {
   children: ReactNode;
   columns: number | undefined;

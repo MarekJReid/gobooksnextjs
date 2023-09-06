@@ -1,32 +1,32 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { fetchProducts } from "../../data/fetchProducts";
 import Accordion from "../../src/components/Accordian/Accordian";
-import ContactForm from "../../src/components/ContactForm/ContactForm";
+import courses from "../../data/courses.json";
 import CourseContactForm from "../../src/components/CoursePageForm/CoursePageForm";
 import PageWrapper from "../../src/components/CoursePageWrapper/CoursePageWrapper";
 import Sidebar from "../../src/components/CourseSidebar/CourseSidebar";
 import FullScreenImage from "../../src/components/FullPageImage";
 import IntroductionSection from "../../src/components/IntroductionSection/IntroductionSection";
 import Layout from "../../src/components/Layout";
-import { Product } from "../../types/types";
+import { Course, Product } from "../../types/types";
 import { useState } from "react";
 
 interface CourseProps {
-  product: Product;
+  product: Course;
 }
 
 const CoursePage: React.FC<CourseProps> = ({ product }) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
-
+  console.log("product.id", product.id);
   return (
     <Layout>
-      <FullScreenImage imageUrl={product.image} />
+      <FullScreenImage imageUrl={`${product.id}`} />
 
       <PageWrapper>
         <div className="flex-1 px-4 w-[90vw]">
           {/* New addition to wrap the content */}
           <IntroductionSection
-            courseName={product.name}
+            courseName={product.title}
             courseDescription={product.description}
           />
           <Accordion
@@ -40,32 +40,29 @@ const CoursePage: React.FC<CourseProps> = ({ product }) => {
         <Sidebar
           priceToUse={product.price}
           price={0}
-          checkoutUrl={product.checkoutUrl}
+          checkoutUrl={product.button}
         />
       </PageWrapper>
     </Layout>
   );
 };
 // ...
-
+function slugify(str) {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+    .replace(/\s+/g, "-") // collapse whitespace and replace by -
+    .replace(/-+/g, "-"); // collapse dashes
+}
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    const products: Product[] = await fetchProducts();
-
-    // Ensure products is an array
-    if (!Array.isArray(products)) {
-      console.error("Products is not an array:", products);
-      return {
-        paths: [],
-        fallback: "blocking", // or any other appropriate value
-      };
-    }
+    const products: Course[] = courses.courses;
 
     // Use the product.slug directly as the course param
     const paths = products.map((product) => ({
-      params: { course: String(product.slug) }, // Convert to string
+      params: { course: slugify(product.title) },
     }));
-    console.log("paths", paths);
+
     return {
       paths,
       fallback: "blocking",
@@ -84,10 +81,14 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
 }: {
   params: { course: any }; // Ensure course is of type string
 }) => {
-  const products = await fetchProducts();
+  // Ensure that params.course is a string
+  const courseParam = params.course as string;
+
+  // Access the courses array from the imported data
+  const products: Course[] = courses.courses;
 
   // Find the product by comparing the slug directly to the given course param
-  const product = products.find((p) => p.slug === params.course);
+  const product = products.find((p) => slugify(p.title) === courseParam);
 
   if (!product) {
     return {
