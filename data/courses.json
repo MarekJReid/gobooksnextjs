@@ -1,6 +1,8 @@
 {
   "courses": [
     {
+      "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/2HHO5ZKOIBKMUSLFPCWGBELP",
+      "price": "600",
       "title": "Introduction to Xero",
       "description": "The Introduction to Xero course is designed to help participants understand the basics of accounting and bookkeeping using Xero's platform.",
       "content": [
@@ -55,6 +57,8 @@
       ]
     },
     {
+      "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/UVXEVZ6RLE2C33PYENG3BI2A",
+      "price": "600",
       "title": "Intermediate Xero Course",
       "description": "Our Intermediate Xero course builds upon the foundational knowledge gained in the Introductory course. It delves deeper into the functionalities and features of the Xero accounting software.",
       "content": [
@@ -104,7 +108,9 @@
       ]
     },
     {
+      "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/LIDVP3B2RGF5QMXJ4ZU3HMYS",
       "title": "Advanced Xero",
+      "price": "600",
       "description": "An advanced Xero course typically builds upon the foundational knowledge gained in basic or introductory Xero courses. Xero is a popular cloud-based accounting software that is used by businesses for various accounting and financial tasks. This advanced course dives deeper into the more complex features and functionalities of the software.",
       "content": [
         {
@@ -182,7 +188,9 @@
       ]
     },
     {
+      "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/5WZ6SAT5GKOK54YAATW4COV7",
       "title": "Introduction to Computer Use",
+      "price": "150",
       "description": "This \"Introduction to Computer Use\" course covers essential concepts, skills, and tools that are fundamental for effectively using computers in various contexts. The course is designed to provide a solid foundation for individuals who have limited or no prior experience with computers, enabling them to become more comfortable and confident in using these essential tools in various aspects of life, work, and study.",
       "content": [
         {
@@ -287,7 +295,9 @@
       ]
     },
     {
+      "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/FPBCVXWUDJYOVCYBU7EPVZMY",
       "title": "Introduction to Microsoft Word",
+      "price": "450",
       "description": "The introduction to Microsoft Word course aims to familiarize participants with the basic tools, features, and functions of Microsoft Word, enabling them to create, edit, and format documents efficiently.",
       "content": [
         {
@@ -389,6 +399,114 @@
             "Mail merge for creating personalized documents.",
             "Creating and formatting long documents (such as reports and theses).",
             "Using templates to streamline document creation."
+          ]
+        }
+      ]
+    },
+    {
+      "button": "https://checkout.square.site/merchant/MLS2YJ30B6GDB/checkout/FMH3XWPTYHOSY546IWAZ2JAG",
+      "title": "Introduction to Microsoft Excel",
+      "description": "The introduction to Microsoft Excel course covers the fundamental concepts and skills required to effectively use Excel for data management, analysis, and visualization. The course is designed for beginners who may have little to no prior experience with the software. The course includes:",
+      "price": "450",
+      "content": [
+        {
+          "heading": "Getting Started with Excel",
+          "subtopics": [
+            "Overview of Excel's interface, including the Ribbon, menus, and tools.",
+            "Navigating worksheets and workbooks.",
+            "Creating and saving new workbooks."
+          ]
+        },
+        {
+          "heading": "Entering and Formatting Data",
+          "subtopics": [
+            "Inputting data into cells.",
+            "Basic formatting options for text, numbers, and dates.",
+            "Using fonts, colors, and cell borders."
+          ]
+        },
+        {
+          "heading": "Basic Formulas and Functions",
+          "subtopics": [
+            "Introduction to formulas and cell references (e.g., A1, B2).",
+            "Using basic mathematical operators (+, -, *, /).",
+            "Common functions like SUM, AVERAGE, COUNT, MIN, and MAX."
+          ]
+        },
+        {
+          "heading": "Working with Rows, Columns, and Cells",
+          "subtopics": [
+            "Inserting, deleting, and moving rows and columns.",
+            "Merging and splitting cells.",
+            "Adjusting column width and row height."
+          ]
+        },
+        {
+          "heading": "Managing Worksheets and Workbooks",
+          "subtopics": [
+            "Adding, renaming, and deleting worksheets.",
+            "Linking data between worksheets.",
+            "Grouping and ungrouping worksheets."
+          ]
+        },
+        {
+          "heading": "Cell Formatting and Styles",
+          "subtopics": [
+            "Custom number formats.",
+            "Applying cell styles and themes.",
+            "Using conditional formatting to highlight data."
+          ]
+        },
+        {
+          "heading": "Data Sorting and Filtering",
+          "subtopics": [
+            "Sorting data by one or multiple columns.",
+            "Applying filters to display specific data subsets.",
+            "Using AutoFilter and advanced filter options."
+          ]
+        },
+        {
+          "heading": "Data Visualization",
+          "subtopics": [
+            "Creating basic charts (bar, column, line, pie).",
+            "Formatting and customizing charts.",
+            "Adding chart elements like titles and legends."
+          ]
+        },
+        {
+          "heading": "Introduction to Data Analysis",
+          "subtopics": [
+            "Using basic Excel functions for data analysis.",
+            "Creating PivotTables for summarizing and analyzing data.",
+            "Using PivotCharts for interactive data visualization."
+          ]
+        },
+        {
+          "heading": "Basic Data Validation and Protection",
+          "subtopics": [
+            "Setting up data validation rules.",
+            "Protecting cells, worksheets, and workbooks with passwords."
+          ]
+        },
+        {
+          "heading": "Introduction to Macros (Optional)",
+          "subtopics": [
+            "Recording and playing back simple macros.",
+            "Basic understanding of automation through macros."
+          ]
+        },
+        {
+          "heading": "Tips for Efficiency",
+          "subtopics": [
+            "Keyboard shortcuts for common tasks.",
+            "Time-saving techniques for navigating and working with large datasets."
+          ]
+        },
+        {
+          "heading": "Projects and Practical Exercises",
+          "subtopics": [
+            "Applying the skills learned to real-world scenarios.",
+            "Creating a simple budget, expense tracker, or data summary."
           ]
         }
       ]

@@ -1,6 +1,21 @@
 import { ReactNode } from "react";
 
 // types.ts
+export interface Course {
+  button: string;
+  price: string;
+  title: string;
+  description: string;
+  image?: string; // Add the image property as a string
+  content: {
+    heading: string;
+    subtopics: string[];
+  }[];
+}
+
+export interface CourseData {
+  courses: Course[];
+}
 export interface Product {
   slug?(arg0: any, slug: any): any;
   channels?: any; // The type is 'any' because it's set as 'undefined' and the exact type isn't specified.

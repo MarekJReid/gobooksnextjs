@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { Product } from "../../../types/types";
+import { Course } from "../../../types/types";
 import Link from "next/link";
-
 interface CourseCardProps {
-  product: Product;
+  product: Course;
   slug: string;
+  id: number;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ product }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ product, id }) => {
   console.log("product", product);
   function slugify(str) {
     return str
@@ -19,32 +19,30 @@ const CourseCard: React.FC<CourseCardProps> = ({ product }) => {
   }
   return (
     <div
-      key={product.id}
-      className="transform transition-transform hover:scale-105 flex flex-col justify-center items-center w-full h-full bg-white p-5"
+      key={id}
+      className="transform transition-transform hover:scale-105 flex flex-col justify-between items-center w-full  bg-white p-5"
     >
       <Link
-        href={`/courses/${encodeURIComponent(slugify(product.name))}`}
-        className="no-underline hover:no-underline"
+        href={`/courses/${encodeURIComponent(slugify(product.title))}`}
+        className="no-underline hover:no-underline "
       >
-        <div className="group cursor-pointer flex flex-col justify-center items-center">
-          {product.image ? (
-            <Image
-              src={product.image}
-              width={500}
-              height={500}
-              alt="Product Image"
-            />
-          ) : (
-            <div className="w-[90vw] md:w-[30vw] lg:w-[25vw] h-[20vh] bg-red-500"></div>
-          )}
-          <h2 className="text-center">{product.name}</h2>
-          <p className="">{product.description}</p>
-          <h2 className="">${(parseFloat(product.price) / 100).toFixed(2)}</h2>
+        <div className="group cursor-pointer flex flex-col  items-center pt-6">
+          <Image
+            src={`/${id}.jpg`}
+            width={500}
+            height={500}
+            alt="Product Image"
+          />
+          <h2 className="text-center mt-6">{product.title}</h2>
+          <div className="flex flex-col  mt-6 h-[300px] items-center justify-between h-full">
+            <p className="font-semibold">{product.description}</p>
+            <h2 className="text-7xl text-blue-900 ">${product.price}</h2>
+          </div>
         </div>
       </Link>
       <div className="w-full flex flex-col md:flex-row justify-center md:space-x-4 p-4">
         <a
-          href={product.checkoutUrl && product.checkoutUrl}
+          href={product.button && product.button}
           // open in new tab
           target="_blank"
           rel="noopener noreferrer"

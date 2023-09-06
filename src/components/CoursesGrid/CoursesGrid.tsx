@@ -3,14 +3,14 @@ import React, { ReactNode } from "react";
 import { useProducts } from "../../../contexts/ProductContexts";
 import Image from "next/image";
 import CourseCard from "../CourseCard/CourseCard";
-
+import products from "../../../data/courses.json";
 interface ThreeColumnGridProps {
   children: ReactNode;
   columns: number | undefined;
 }
 
 const CoursesGrid: React.FC<ThreeColumnGridProps> = ({ columns }) => {
-  const { products } = useProducts();
+  console.log("products", products.courses);
   return (
     <>
       <h2 className="text-4xl mt-36 md:mt-0 md:text-5xl font-bold text-center">
@@ -19,8 +19,8 @@ const CoursesGrid: React.FC<ThreeColumnGridProps> = ({ columns }) => {
       <div
         className={`grid grid-cols-1 mb-24 md:grid-cols-3 gap-4 grid-flow-row justify-center flex align-center py-16 p-5 md:pt-[56px] `}
       >
-        {products.map((product, i) => (
-          <CourseCard product={product} key={i} slug={""} />
+        {products.courses.map((product, i) => (
+          <CourseCard product={product} key={i} slug={""} id={i} />
         ))}
       </div>
     </>
